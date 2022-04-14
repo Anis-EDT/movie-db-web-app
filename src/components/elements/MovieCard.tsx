@@ -22,7 +22,6 @@ const MovieCard = ({ image, movieId, clickable }: movieCardProps) => {
   const [isModal, setModal] = useState(false);
 
   const [movie, loading, error] = useMovieFetch(movieId);
-  console.log('inside movie card : ',movieId, movie.id , loading , error )
 
   if (error) return <div>Something went wrong ...</div>;
   if (loading) return <Spinner />;

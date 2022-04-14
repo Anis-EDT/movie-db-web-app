@@ -62,7 +62,6 @@ const Home = () => {
 
       <MovieWall header={searchTerm ? "Search Result" : "Popular Movies"}>
         {movies.map((movie: any) => {
-          console.log("heyyyyyy in movie wall", movie.id);
          return( <>
             <MovieCard
               key={movie.id}
