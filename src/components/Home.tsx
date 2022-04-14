@@ -36,8 +36,6 @@ const Home = () => {
    = useHomeFetch(searchTerm);
 
   const searchMovies = (search : string) => {
-    console.log("3aaaaaaaaaaaaaaaaaa", search)
-
     const endpoint = search ? SEARCH_BASE_URL + search : POPULAR_BASE_URL;
 
     setSearchTerm(search);
