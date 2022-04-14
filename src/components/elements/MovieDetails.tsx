@@ -24,6 +24,7 @@ const MovieDetails = ({ movie } : any) => (
               : NoImage
           }
           clickable={false}
+          movieId={movie.id}
 //          alt="MovieCard"
         />
       </div>

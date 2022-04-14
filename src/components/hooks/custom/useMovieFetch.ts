@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 // Environment Variables
 import { API_URL, API_KEY } from '../../../API';
 
+
 export const useMovieFetch = (movieId: string) : any=> {
 
   const [state, setState] = useState({});

@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { StyledMovieModal } from "../styles/StyledMovieModal";
 interface modalProps {
   isVisible : boolean , 
-  children: any,
+  children: React.ReactNode,
   onClose: Function
 }
 

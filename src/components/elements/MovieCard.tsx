@@ -12,7 +12,13 @@ import { useMovieFetch } from "../hooks/custom/useMovieFetch";
 // Styled Components
 import { StyledMovieCard } from "../styles/StyledMovieCard";
 
-const MovieCard = ({ image, movieId, clickable }: any) => {
+interface movieCardProps {
+  image : string,
+  movieId : string, 
+  clickable : boolean
+}
+
+const MovieCard = ({ image, movieId, clickable }: movieCardProps) => {
   const [isModal, setModal] = useState(false);
 
   const [movie, loading, error] = useMovieFetch(movieId);
@@ -47,7 +53,7 @@ const MovieCard = ({ image, movieId, clickable }: any) => {
 
 MovieCard.propTypes = {
   image: PropTypes.string,
-  movieId: PropTypes.number,
+  movieId: PropTypes.string,
   clickable: PropTypes.bool,
 };
 

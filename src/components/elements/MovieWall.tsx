@@ -7,7 +7,11 @@ import {
   StyledMovieWallContent,
 } from "../styles/StyledMovieWall";
 
-const MovieWall = ({ header, children }: any) => (
+interface MovieWallProps{
+  header: string,
+  children : React.ReactNode
+}
+const MovieWall = ({ header, children }: MovieWallProps) => (
   <StyledMovieWall>
     <h1>{header}</h1>
     <StyledMovieWallContent>{children}</StyledMovieWallContent>

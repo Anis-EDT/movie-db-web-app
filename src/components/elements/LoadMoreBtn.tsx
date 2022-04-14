@@ -4,7 +4,12 @@ import PropTypes from "prop-types";
 // Styled Components
 import { StyledLoadMoreBtn } from "../styles/StyledLoadMoreBtn";
 
-const LoadMoreBtn = ({ text, callback } : any) => (
+interface LoadMoreBtnProps{
+  text : string,
+  callback : Function
+}
+
+const LoadMoreBtn = ({ text, callback } : LoadMoreBtnProps) => (
   <StyledLoadMoreBtn type="button" onClick={callback}>
     {text}
   </StyledLoadMoreBtn>
